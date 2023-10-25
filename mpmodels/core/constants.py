@@ -1,5 +1,8 @@
 import numpy as np
 
+NUM_STIM = 79
+MAX_FRAMES = 217
+
 RIDGECV_ALPHA_CV = np.sort(
     np.concatenate(
         [

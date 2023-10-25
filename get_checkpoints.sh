@@ -8,14 +8,14 @@ mkdir -p $TARGET_DIR
 
 # List of model files to download
 FILES=(
-    "VC-1+CTRNN_k700.pt"
     "VC-1+CTRNN_physion.pt"
-    "VC-1+LSTM_k700.pt"
+    "VC-1+CTRNN_k700.pt"
     "VC-1+LSTM_physion.pt"
-    "R3M+CTRNN_k700.pt"
+    "VC-1+LSTM_k700.pt"
     "R3M+CTRNN_physion.pt"
-    "R3M+LSTM_k700.pt"
+    "R3M+CTRNN_k700.pt"
     "R3M+LSTM_physion.pt"
+    "R3M+LSTM_k700.pt"
     "FitVid_physion_64x64.pt"
     "SVG_physion_128x128.pt"
     "CSWM_large_physion.pt"

@@ -4,6 +4,9 @@ import socket
 ROOT_DIR = os.path.expanduser("~/")
 BASE_DIR = os.path.join(ROOT_DIR, "mental-sim/")
 
+NEURAL_RESP_DIR = ""
+NEURAL_STIM_JPEG_DIR = ""
+BEHAVIORAL_FIT_RESULTS_DIR = ""
 OCP_PHYSION_RESULTS_DIR = os.path.join(
     BEHAVIORAL_FIT_RESULTS_DIR, "ocp_physion_results/"
 )
@@ -13,6 +16,7 @@ OCP_PHYSION_REGRESSION_RESULTS_DIR = os.path.join(
 OCP_PHYSION_HUMAN_RESULTS_DIR = os.path.join(OCP_PHYSION_RESULTS_DIR, "humans/")
 
 MODEL_CKPT_DIR = os.path.join(BASE_DIR, "trained_models/")
+MODEL_FEATURES_SAVE_DIR = ""
 
 # kinetics 700
 KINETICS_BASE_DIR = os.path.join(ROOT_DIR, "kinetics_dataset/")

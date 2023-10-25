@@ -21,8 +21,11 @@ for encoder in PF_ENCODERS:
 for encoder in ["R3M", "VC1"]:
     for dynamics in ["LSTM", "CTRNN"]:
         for dataset in ["physion", "k700"]:
+            encoder_name = encoder
+            if encoder == "VC1":
+                encoder_name = "VC-1"
             PATHS[f"pf{encoder}_{dynamics}_{dataset}"] = os.path.join(
-                MODEL_CKPT_DIR, f"{encoder}+{dynamics}_{dataset}.pt"
+                MODEL_CKPT_DIR, f"{encoder_name}+{dynamics}_{dataset}.pt"
             )
 
 for model in PATHS.keys():
