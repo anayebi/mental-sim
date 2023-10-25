@@ -1,0 +1,32 @@
+{
+    "save_prefix": "/om2/group/yanglab/anayebi/trained_models/",
+    "use_mongodb": false,
+    "port": 27017,
+    "db_name": "svg",
+    "coll_name": "physion_128x128",
+    "exp_id": "gpuexp0",
+    "trainer": "SVGTrainer",
+    "gpus": [0, 1],
+    "ddp_port": 4824,
+    "tpu": false,
+    "seed": 1,
+    "model": "svg_physion_128x128",
+    "dataloader_params": {
+        "dataset_type": "PhysionDataset",
+        "train_root_path": "/om2/group/yanglab/anayebi/physion/dynamics_training/",
+        "val_root_path": "/om2/group/yanglab/anayebi/physion/testing/",
+        "val_prefixes": ["hdf5s", "hdf5s-redyellow"],
+        "seq_len": 25,
+        "subsample_factor": 6,
+        "dataloader_workers": 32
+    },
+    "optimizer_params": {
+        "train_batch_size": 50,
+        "accumulation_train_batch_size": 100,
+        "val_batch_size": 100,
+        "initial_lr": 0.002
+    },
+    "num_epochs": 300,
+    "save_freq": 10,
+    "resume_checkpoint": null
+}

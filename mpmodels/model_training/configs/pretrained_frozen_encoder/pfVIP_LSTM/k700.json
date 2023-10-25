@@ -1,0 +1,31 @@
+{
+    "save_prefix": "/om2/group/yanglab/anayebi/trained_models/",
+    "use_mongodb": false,
+    "port": 27017,
+    "db_name": "pfVIP_LSTM",
+    "coll_name": "k700",
+    "exp_id": "gpuexp0",
+    "trainer": "SelfSupLossMinTrainer",
+    "gpus": [0],
+    "ddp_port": 3295,
+    "tpu": false,
+    "seed": 1,
+    "model": "pfVIP_LSTM_k700",
+    "dataloader_params": {
+        "root_path": "/om4/group/jazlab/anayebi/kinetics_dataset/k700-2020_rgb480ss/",
+        "path_label_include": "/home/anayebi/MentalPong/scripts/dataset_dl/kinetics_dataset/labels_to_id.csv",
+        "num_segments": 8,
+        "frames_per_segment": 1,
+        "imagefile_template": "frame_{0:012d}.jpg",
+        "transform_per_frame": true,
+        "dataloader_workers": 8
+    },
+    "optimizer_params": {
+        "train_batch_size": 256,
+        "val_batch_size": 256,
+        "initial_lr": 0.0008
+    },
+    "num_epochs": 100,
+    "save_freq": 1,
+    "resume_checkpoint": null
+}

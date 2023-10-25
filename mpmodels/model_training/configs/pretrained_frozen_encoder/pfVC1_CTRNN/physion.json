@@ -1,0 +1,31 @@
+{
+    "save_prefix": "/om2/group/yanglab/anayebi/trained_models/",
+    "use_mongodb": false,
+    "port": 27017,
+    "db_name": "pfVC1_CTRNN",
+    "coll_name": "physion",
+    "exp_id": "gpuexp0",
+    "trainer": "SelfSupLossMinTrainer",
+    "gpus": [0],
+    "ddp_port": 6392,
+    "tpu": false,
+    "seed": 1,
+    "model": "pfVC1_CTRNN_physion",
+    "dataloader_params": {
+        "dataset_type": "PhysionDataset",
+        "train_root_path": "/om2/group/yanglab/anayebi/physion/dynamics_training/",
+        "val_root_path": "/om2/group/yanglab/anayebi/physion/testing/",
+        "val_prefixes": ["hdf5s", "hdf5s-redyellow"],
+        "seq_len": 25,
+        "subsample_factor": 6,
+        "dataloader_workers": 32
+    },
+    "optimizer_params": {
+        "train_batch_size": 32,
+        "val_batch_size": 32,
+        "initial_lr": 1e-4
+    },
+    "num_epochs": 100,
+    "save_freq": 1,
+    "resume_checkpoint": null
+}

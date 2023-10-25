@@ -1,0 +1,32 @@
+{
+    "save_prefix": "/om2/group/yanglab/anayebi/trained_models/",
+    "use_mongodb": false,
+    "port": 27017,
+    "db_name": "fitvid_ctxt7",
+    "coll_name": "physion_64x64",
+    "exp_id": "gpuexp0",
+    "trainer": "FitVidTrainer",
+    "gpus": [0,1,2,3,4,5,6,7],
+    "ddp_port": 8831,
+    "tpu": false,
+    "seed": 1,
+    "model": "fitvid_ctxt7_physion_64x64",
+    "dataloader_params": {
+        "dataset_type": "PhysionDataset",
+        "train_root_path": "/om2/group/yanglab/anayebi/physion/dynamics_training/",
+        "val_root_path": "/om2/group/yanglab/anayebi/physion/testing/",
+        "val_prefixes": ["hdf5s", "hdf5s-redyellow"],
+        "seq_len": 25,
+        "subsample_factor": 6,
+        "dataloader_workers": 8
+    },
+    "optimizer_params": {
+        "train_batch_size": 128,
+        "accumulation_train_batch_size": 128,
+        "val_batch_size": 128,
+        "initial_lr": 1e-3
+    },
+    "num_epochs": 3125,
+    "save_freq": 50,
+    "resume_checkpoint": null
+}
