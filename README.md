@@ -43,7 +43,7 @@ Some models may be better suited than others based on your needs, but we general
 We also include our best Physion-pretrained FitVid, SVG, and temporally-augmented C-SWM models, for additional points of comparison involving end-to-end pixel-wise and object-slot future predictors.
 
 Once you have loaded the PyTorch model, you can extract features according to your pipeline of choice.
-*Note that all of the models expect 7 context frames before running the forward simulation, so be sure to provide that minimally as input!*
+**Note that all of the models expect 7 context frames before running the forward simulation, so be sure to provide that minimally as input!**
 If you want a standard example of extracting model features and running behavioral regression, see [here](https://github.com/anayebi/mental-sim/blob/main/mpmodels/behavior/run_model_regression.py).
 If you want examples of extracting model features per video (where the number of frames can be different per video, so they must be processed one at a time), see [here](https://github.com/anayebi/mental-sim/blob/main/mpmodels/core/feature_extractor.py#L42-L196).
 
