@@ -50,9 +50,9 @@ If you want examples of extracting model features per video (where the number of
 ## Training Code
 Download your video pretraining dataset of choice and then run under `mpmodels/model_training/`:
 ```
-CUDA_VISIBLE_DEVICES=[gpu_id] python runner.py --config=[]
+python runner.py --config=[]
 ```
-The configs and hyperparameters we used are specified in the `mpmodels/model_training/configs` [directory](https://github.com/anayebi/mental-sim/tree/main/mpmodels/model_training/configs).
+Specify the `gpu_id` in the config. The configs and hyperparameters we used are specified in the `mpmodels/model_training/configs` [directory](https://github.com/anayebi/mental-sim/tree/main/mpmodels/model_training/configs).
 Model architectures are implemented in the `mpmodels/models/` [directory](https://github.com/anayebi/mental-sim/tree/main/mpmodels/models).
 
 For example, to train our `VC-1+CTRNN` model on the Physion dataset, you can run this command:
