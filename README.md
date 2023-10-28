@@ -1,5 +1,6 @@
 # Models of Mental Simulation
 This repo contains pretrained PyTorch models that are optimized to predict the future state of their environment.
+
 As these models are stimulus-computable, they can be applied to any new video for further neural and behavioral comparisons of your design.
 
 This repository is based on our paper:
