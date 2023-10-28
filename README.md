@@ -26,7 +26,7 @@ To install this package and all of its dependecies, clone this repo on your mach
 4. Run `pip install -e .` to install the current version.
 The installation above will automatically download the necessary dependencies, which includes [`ptutils`](https://github.com/anayebi/ptutils) and [`brainmodel_utils`](https://github.com/anayebi/brainmodel_utils), which are my Python packages for training PyTorch models and extracting their features for neural and behavioral regression, respectively.
 
-## Available Pre-trained Models
+## Available Pretrained Models
 To get the saved checkpoints of the models, simply run this bash script:
 ```
 ./get_checkpoints.sh
