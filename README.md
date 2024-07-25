@@ -37,6 +37,8 @@ If you want a subset of the models, feel free to modify the `for` loop in the ab
 Models are named according to the convention of `[architecture]_[pretraining-dataset]_[image_size]`, all of which are described in [our paper](https://arxiv.org/abs/2305.11772).
 **You can see [this notebook](https://github.com/anayebi/mental-sim/blob/main/Loading%20model%20weights.ipynb) for loading all of our pretrained models.**
 
+**Note: if R3M loading has an issue with finding `~/.r3m/r3m_50/model.pt`, you can get it from the `r3m_50.zip` file on [Hugging Face](https://huggingface.co/anayebi/mental-sim-models).**
+
 Some models may be better suited than others based on your needs, but we generally recommend: 
 - `VC-1+CTRNN/LSTM` models, where the dynamics module is pretrained on either Physion or the much larger Kinetics-700 dataset. This model class reasonably matches *both* Mental-Pong neural and OCP behavioral benchmarks we tested.
 - `R3M+CTRNN/LSTM` models, where the dynamics module is pretrained on either Physion or the much larger Kinetics-700 dataset. This model class best matches the Mental-Pong neural benchmark we tested.
